@@ -1,0 +1,31 @@
+.shiny-bound-input, .twitter-typeahead, .tt-hint, .tt-input, .tt-input-group, .tt-menu {
+  width: 100%;
+}
+/*input typeahead tt-query shiny-bound-input*/
+.tt-dropdown-menu{
+    width: 100%;
+}
+
+body {
+  max-width: 950px;
+  margin: auto;
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 20px grey;
+}
+
+.container-fluid {
+  background-color: white;
+}
+
+@media (max-width: 500px) {
+  .container-fluid {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+#tsne_marker_plot img {
+  max-width: 100%;
+  width: 100%;
+  height: auto
+}

@@ -1,6 +1,6 @@
 tabPanel(
-  # "Lung",
-  "Data Viewer",
+  
+  "Lung Cell Viewer",
   
   h4("Identified single-cell RNA-seq clusters in RA-ILD, RA-UIP, and healthy lung"),
   
@@ -32,8 +32,8 @@ tabPanel(
                     column(
                       width = 10,
                       div(
-                        htmlOutput("tnse_marker_plot", height = "400px"),
-                        style = "height: 400px;"
+                        htmlOutput("tnse_marker_plot", height = "500px"),
+                        style = "height: 500px;"
                       )
                     )
                     
@@ -58,7 +58,7 @@ tabPanel(
                   ),
                   column(
                     width = 10,
-                    DT::dataTableOutput("dg_table", height = "350px")
+                    DT::dataTableOutput("dg_table", height = "300px")
                   )
                 )
                 # hr(),
@@ -74,30 +74,55 @@ tabPanel(
               
         
               
-              # mainPanel(
-              #   h4("Cluster annotations:"),
-              #   p(strong("SC-F1:"), "CD34+ sublining fibroblasts;",
-              #     strong("SC-F2:"), "HLA+ sublining fibroblasts;",
-              #     strong("SC-F3:"), "DKK3+ sublining fibroblasts;",
-              #     strong("SC-F4:"), "CD55+ lining fibroblasts;"),
-              #   
-              #   p(strong("SC-M1:"), "IL1B+ pro-inflammatory monocytes;",
-              #     strong("SC-M2:"), "NUPR1+ monocytes;",
-              #     strong("SC-M3:"), "C1QA+ monocytes;",
-              #     strong("SC-M4:"), "IFN-activated monocytes;"),
-              #   
-              #   p(strong("SC-T1:"), "CCR7+ CD4+ T cells;",
-              #     strong("SC-T2:"), "FOXP3+ Tregs;",
-              #     strong("SC-T3:"), "PD-1+ Tph/Tfh;",
-              #     strong("SC-T4:"), "GZMK+ CD8+ T cells;",
-              #     strong("SC-T5:"), "GNLY+ GZMB+ CTLs;",
-              #     strong("SC-T6:"), "GZMK+/GZMB+ T cells;"),
-              #   
-              #   p(strong("SC-B1:"), "IGHD+ CD270 naive B cells;",
-              #     strong("SC-B2:"), "IGHG3+ CD27- memory B cells;",
-              #     strong("SC-B3:"), "autoimmune-associated cells (ABC);",
-              #     strong("SC-B4:"), "Plasmablasts")
-              # ),
+              mainPanel(
+                h4("Cluster annotations (to be added):"),
+                p(strong("AT1:    "), "",
+                  strong("AT2:    "), "",
+                  strong("AT2 a:    "), "",
+                  strong("AT2 b:    "),""),
+
+                p(strong("C1:    "), "",
+                  strong("C2:    "), "",
+                  strong("C3:    "), ""),
+
+                p(strong("E1:    "), "",
+                  strong("E2:    "), "",
+                  strong("E3:    "), ""),
+
+                p(strong("F0:    "), "",
+                  strong("F1:    "), "",
+                  strong("F2:    "), "",
+                  strong("F3:    "), "",
+                  strong("F4:    "), "",
+                  strong("F5:    "), "",
+                  strong("F6:    "), "",
+                  strong("F7:    "), "",
+                  strong("F8:    "), ""),
+                
+                p(strong("M0"), "",
+                  strong("M2"), "",
+                  strong("M3"), "",
+                  strong("M4"), "",
+                  strong("M5"), "",
+                  strong("M6"), "",
+                  strong("M7"), "",
+                  strong("M8"), "",
+                  strong("M9"), ""),
+                
+                p(strong("T0"), "",
+                  strong("T1"), "",
+                  strong("T2"), "",
+                  strong("T3"), "",
+                  strong("T4"), "",
+                  strong("T5"), "",
+                  strong("T6"), "",
+                  strong("T7"), "",
+                  strong("T8"), "",
+                  strong("T9"), "",
+                  strong("T10"), "",
+                  strong("T11"), "")
+              ),
+            
               br()
               
   ) # tabsetPanel

@@ -18,30 +18,30 @@ col_vector = unlist(mapply(brewer.pal, qual_col_pals$maxcolors, rownames(qual_co
 plot_tsne <- function(dat, tsne_x = "T1", tsne_y = "T2", title = NULL) {
   n_nonzero  <- sum(dat$marker > 0)
   # tsne_title <- bquote("tSNE of PCA on Log"[2]~"(CPM + 1)")
-  point_size <- 1.0
+  point_size <- 1.2
   if (nrow(dat) < 5000) {
     point_size <- 2.5
   }
   fill_values <- quantile_breaks(dat$marker, n = 9)
   fill_values <- fill_values / max(fill_values)
   fill_palette <- RColorBrewer::brewer.pal(9, "Greens")
-  theme_tsne_1 <- theme_bw(base_size = 25) + theme(
+  theme_tsne_1 <- theme_bw(base_size = 15) + theme(
     legend.position = "bottom",
     axis.text       = element_blank(),
     axis.ticks      = element_blank(),
     panel.grid      = element_blank(),
     panel.border    = element_rect(size = 0.5),
     plot.title      = element_text(size = 30),
-    legend.text    = element_text(size = 18)
+    legend.text    = element_text(size = 15)
   )
-  theme_tsne_2 <- theme_bw(base_size = 25) + theme(
+  theme_tsne_2 <- theme_bw(base_size = 15) + theme(
     legend.position = "bottom",
     axis.text       = element_blank(),
     axis.ticks      = element_blank(),
     panel.grid      = element_blank(),
     panel.border    = element_rect(size = 0.5),
     plot.title      = element_text(size = 30),
-    legend.text    = element_text(size = 18)
+    legend.text    = element_text(size = 15)
   )
   p1 <- ggplot() +
     geom_point(
@@ -77,7 +77,7 @@ plot_tsne <- function(dat, tsne_x = "T1", tsne_y = "T2", title = NULL) {
       shape   = 21,
       stroke  = 0.01
     ) +
-    scale_fill_manual(values = col_vector, name = "Cluster") +
+    scale_fill_manual(values = col_vector, name = "") +
     guides(fill = guide_legend(nrow = 6, override.aes = list(size = 3))) +
     labs(x = NULL, y = NULL, title = "Clusters") +
     # ggtitle("Identified clusters") +

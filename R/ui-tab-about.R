@@ -5,14 +5,15 @@ tabPanel(
     h3("Welcome"),
     
     p(
-      "This site provides access to view the data from the single-cell RA-ILD, RA-UIP, IPF, and healthy lung samples.",
+      "This site provides access to view the single-cell RNA-seq data from RA-ILD, RA-UIP, IPF, and healthy lung samples.",
+      "The lung data was generated through the Roche consortium, closely collebrating with",
+      a("Dr. Edy Kim.", href = "mailto:ekim11@bwh.harvard.edu"), 
       "Please feel free to explore the site.",
       "On this site, we provide an interactive view of the single-cell RNA-seq cell type clusters in the lung microenvironment."
       
       # a("Single-cell RA-ILD, RA-UIP, IPF, and healthy lung data",
       #   href = "https://www.nih.gov/research-training/accelerating-medicines-partnership-amp")
     ),
-    br(),
     
     # p(
     #   "To learn more about this project, please refer to our preprint paper available at",
@@ -41,18 +42,7 @@ tabPanel(
       #     href = "https://github.com/immunogenomics/amp_phase1_ra"
       #   )
     ),
-    br(),
-    
-    p(
-      "Please contact", 
-      a("Dr. Fan Zhang", href = "mailto:fzhang.combio@gmail.com"),
-      "if you have any questions, requests, or comments",
-      " on the analysis and results."
-    ),
-    br(),
-    br(),
-    br()
-    
+
     # h3("Accelerating Medicines Partnerships (AMP)"),
     # p(
     #   "The",
@@ -83,35 +73,23 @@ tabPanel(
     #     "Welcome to read the paper to know more details."
     # ),
 
-    # h2("Disclaimer"),
-    # p(
-    #   "Data presented on this page is from Phase 1 of the AMP partership."
-    #   # " Currently, this is private data meant to be shared internally,",
-    #   # " only with consortium members."
-    # ),
-    # p(
-    #    strong(
-    #     "Sharing any data from this site with anyone outside of the",
-    #    " AMP partnership is prohibited."
-    #   )
-    # ),
-    # p(
-    #   "This website is an experiment in providing early access to",
-    #   " preliminary data analysis results. The content of this site is",
-    #   " subject to change at any time without notice. We hope that you",
-    #   " find it useful, but we provide it 'as is' without warranty of",
-    #   " any kind, express or implied."
-    # ),
-    
-    # h3("Contact"),
-    # p(
-    #   "This site is maintained by", 
-    #   a("Kamil Slowikowski", href = "mailto:kslowikowski@fas.harvard.edu"),
-    #   "and",
-    #   a("Fan Zhang.", href = "mailto:fanzhang@broadinstitute.org"),
-    #   "Please contact us if you have any questions, requests, or comments",
-    #   " on the analysis and results."
-    # ),
+    h4("Disclaimer"),
+    p(
+      "Data presented on this page is currently private data meant to be shared internally only with consortium members.",
+      "This website is an experiment in providing early access to",
+      " preliminary data analysis results. The content of this site is",
+      " subject to change at any time without notice. We hope that you",
+      " find it useful, but we provide it 'as is' without warranty of",
+      " any kind, express or implied."
+    ),
+
+    h4("Contact"),
+    p(
+      "This site is maintained by",
+      a("Dr. Fan Zhang.", href = "mailto:fanzhang@broadinstitute.org"), 
+      "Please contact us if you have any questions, requests, or comments",
+      " on the analysis and results."
+    )
 
   ) # mainPanel
   

@@ -18,7 +18,7 @@ col_vector = unlist(mapply(brewer.pal, qual_col_pals$maxcolors, rownames(qual_co
 plot_tsne <- function(dat, tsne_x = "T1", tsne_y = "T2", title = NULL) {
   n_nonzero  <- sum(dat$marker > 0)
   # tsne_title <- bquote("tSNE of PCA on Log"[2]~"(CPM + 1)")
-  point_size <- 2.0
+  point_size <- 1.0
   if (nrow(dat) < 5000) {
     point_size <- 2.5
   }
@@ -49,7 +49,7 @@ plot_tsne <- function(dat, tsne_x = "T1", tsne_y = "T2", title = NULL) {
       mapping = aes_string(x = tsne_x, y = tsne_y, fill = "marker"),
       size    = point_size,
       shape   = 21,
-      stroke  = 0.15
+      stroke  = 0.01
     ) +
     scale_fill_gradientn(
       # Linear scale
@@ -75,7 +75,7 @@ plot_tsne <- function(dat, tsne_x = "T1", tsne_y = "T2", title = NULL) {
       mapping = aes_string(x = tsne_x, y = tsne_y, fill = "cluster"),
       size    = point_size,
       shape   = 21,
-      stroke  = 0.12
+      stroke  = 0.01
     ) +
     scale_fill_manual(values = col_vector, name = "Cluster") +
     guides(fill = guide_legend(nrow = 6, override.aes = list(size = 3))) +

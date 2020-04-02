@@ -44,7 +44,7 @@ ui <- fluidPage(
   navbarPageWithText(
     "AMP Phase I",
     source(file.path("R", "ui-tab-about.R"), local = TRUE)$value,
-    source(file.path("R", "ui-tab-sle.R"), local = TRUE)$value,
+    source(file.path("R", "ui-tab-ild.R"), local = TRUE)$value,
     text = uiOutput("navbar_right")
   )
 
@@ -60,6 +60,7 @@ which_numeric_cols <- function(dat) {
   }))
 }
 
+  
 server <- function(input, output, session) {
 
   # Debug
@@ -71,11 +72,11 @@ server <- function(input, output, session) {
 
   output$tnse_marker_plot <- renderText({
     marker <- one_gene_symbol_default
-    # this_gene <- as.character(dg$gene[input$dg_table_rows_selected])
+    this_gene <- as.character(dg$gene[input$dg_table_rows_selected])
     # this_gene <- as.character(input$dg_table_rows_selected)
-    # if (length(this_gene) > 0) {
-    #   marker <- this_gene
-    # }
+    if (length(this_gene) > 0) {
+      marker <- this_gene
+    }
     stopifnot(marker %in% gene_symbols)
     gene_ix <- which(gene_symbols == marker)
     meta$marker <- as.numeric(log2cpm[gene_ix,])
@@ -115,10 +116,10 @@ server <- function(input, output, session) {
 
   output$box_marker_plot_all <- renderText({
     marker <- one_gene_symbol_default
-    # this_gene <- as.character(dg$gene[input$dg_table_rows_selected])
-    # if (length(this_gene) > 0) {
-    #   marker <- this_gene
-    # }
+    this_gene <- as.character(dg$gene[input$dg_table_rows_selected])
+    if (length(this_gene) > 0) {
+      marker <- this_gene
+    }
     stopifnot(marker %in% gene_symbols)
     gene_ix <- which(gene_symbols == marker)
     meta$marker <- as.numeric(log2cpm[gene_ix,])

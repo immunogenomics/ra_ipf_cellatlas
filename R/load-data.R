@@ -21,7 +21,9 @@ solar_flare <- c(
 
 log2cpm_dimnames_file <- "data/single-cells-dimnames.rda"
 log2cpm_file <- "data/exprs_norm_noNorth_fan_filter_4123genes_2020-03-25.rds.h5"
-meta <- readRDS("data/global_fine_clusters_website.rds")
+meta <- readRDS("data/global_fine_clusters_website_2020-04-02.rds")
+# Change "T/NK cell" to "T NK cell"
+# meta$cell_type[which(meta$cell_type == "T/NK cell")] <- "T NK cell"
 
 log2cpm <- HDF5Array::HDF5Array(file = log2cpm_file, name = "log2cpm")
 stopifnot(all(meta$cell == colnames(log2cpm)))
@@ -42,7 +44,7 @@ possible_cell_types_rna <- c(
  "All cells" = "all",
  "Fibroblast" = "Fibroblast",
  "Myeloid" = "Myeloid",
- "T/NK cell" = "T/NK cell"
+ "T NK cell" = "T NK cell"
 )
 
 one_gene_symbol_default <- "CD14"

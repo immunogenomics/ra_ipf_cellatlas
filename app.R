@@ -42,7 +42,7 @@ ui <- fluidPage(
   ),
 
   navbarPageWithText(
-    "AMP Phase I",
+    "Single-cell RA-ILD/IPF Lung",
     source(file.path("R", "ui-tab-about.R"), local = TRUE)$value,
     source(file.path("R", "ui-tab-ild.R"), local = TRUE)$value,
     text = uiOutput("navbar_right")

@@ -1,5 +1,5 @@
 tabPanel(
-  # "Rheumatoid Arthritis",
+  # "Lung",
   "Data Viewer",
   
   h4("Identified single-cell RNA-seq clusters in RA-ILD, RA-UIP, and healthy lung"),

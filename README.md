@@ -4,5 +4,5 @@ This git repo is the source code to visualize our analysis and reesults of compa
 
 We focus on rheumatoid arthritis-associated interstitial lung disease (RA-ILD), and its similarities and differences with idiopathic pulmonary fibrosis (IPF) and other lung-related phenotypes.
 
-This site is maintained by  a("Dr. Fan Zhang.", href = "mailto:fanzhang@broadinstitute.org"). Please contact us if you have any questions, requests, or comments on the analysis and results.
+This site is maintained by Fan Zhang. Please contact us if you have any questions, requests, or comments on the analysis and results.
 

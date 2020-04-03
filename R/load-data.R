@@ -47,7 +47,7 @@ possible_cell_types_rna <- c(
  "T NK cell" = "T NK cell"
 )
 
-one_gene_symbol_default <- "CD14"
+one_gene_symbol_default <- "SPP1"
 
 
 # Upload statistics of differential analysis results
